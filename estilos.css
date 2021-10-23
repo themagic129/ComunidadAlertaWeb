@@ -1,0 +1,74 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap');
+
+
+
+.card-body {
+
+    display: flex;
+    flex-direction: column;
+  
+}
+
+
+
+.titulo-tarjeta{ 
+  text-align: center;
+  color: #F56A15;
+  font-size: 1.4em;
+  font-family: 'Roboto', sans-serif;
+
+}
+
+
+.sidebar {
+    background-color: #3D5498;
+}
+
+.main-sidebar {
+    background-color: #3D5498;
+}
+
+.logo{
+    width: 50px;
+}
+
+.form-control-sidebar {
+    background-color: white !important;
+    color: rgb(102, 102, 102) !important;
+}
+
+.tarjeta-emergencia {
+    margin-right: 20px;
+}
+
+
+.tipo-alerta {
+    text-align: center;
+    font-size: 1.3em;
+    font-weight: 600;
+    color: grey;
+    margin-bottom: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.card-body .detalle {
+    font-weight: 600;
+    font-family: 'Roboto', sans-serif;
+}
+
+.info {
+
+    line-height: 15px;
+    font-weight: 600;
+    color: rgb(70, 70, 70);
+    font-family: 'Roboto', sans-serif;
+
+}
+
+.dato-info {
+    font-weight: 400;
+    font-family: 'Roboto', sans-serif;
+    color: rgb(107, 107, 107);
+    
+}
