@@ -26,7 +26,8 @@
   <!-- summernote -->
   <link rel="stylesheet" href="plugins/summernote/summernote-bs4.min.css">
   <link rel="stylesheet" href="estilos.css">
-
+  
+   
   <!--<meta http-equiv="refresh" content="20" />-->
 
   
@@ -226,7 +227,7 @@
           </li>
           
           <li class="nav-item">
-            <a href="pages/widgets.html" class="nav-link">
+            <a href="usuarios.php" class="nav-link">
               <i class="nav-icon fas fa-user"></i>
               <p>
                Usuarios

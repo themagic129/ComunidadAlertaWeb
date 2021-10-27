@@ -32,6 +32,7 @@
   <a href="index.php" class="btn btn-primary float-end">Back</a>
 </h4>
 
+
 <form action="code.php" method="POST">
 
 <div class="form-group mb-3">
@@ -72,6 +73,8 @@
 
   <!-- /.content -->
 </div>
+
+
 
 
 <?php include_once "vistas/parte_inferior.php"?>
