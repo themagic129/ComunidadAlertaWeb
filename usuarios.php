@@ -11,7 +11,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="ml-5">Historial de Emergencias</h1>
+            <h1 class="ml-5">Gestionar Usuarios</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -28,20 +28,21 @@
 
 
   <div class="container-fluid">
-  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+  <button type="button" class="btn btn-primary mb-1" data-toggle="modal" data-target="#exampleModal">
   Crear Usuario
 </button>
-     <table class="table">
+     <table class="table col-12 text-center">
 
      <thead style="background-color: #3D5498; color:white;">
        <tr>
-         <th>Fecha</th>
-         <th>Tipo</th>
-         <th>Nombre de la Persona</th>
-         <th>Dirección</th>
+         <th>Usuario</th>
+         <th>Tipo de Usuario</th>
+         <th>Nombre</th>
+         <th>Apellido</th>
+         <th>Email</th>
          <th>Teléfono</th>
-         <th>Descripción</th>
-         <th>Hora</th>
+         <th>Editar</th>    
+         <th>Eliminar</th>     
        </tr>
      </thead>
 
@@ -49,7 +50,7 @@
            <?php
            include('dbconfig.php');
 
-           $ref_table = 'Emergencias';
+           $ref_table = 'Usuarios';
            $fetchdata = $database->getReference($ref_table)->getValue();
 
            if($fetchdata > 0) {
@@ -58,13 +59,21 @@
 
               ?>
                <tr>
-               <td><p>26/10/63</p></td>
-               <td><?=$row['tipoemergencia'];?></td>
-               <td><?=$row['nombredepersona'];?></td>
-               <td><?=$row['direccion'];?></td>
+               
+               <td><?=$row['usuario'];?></td>
+               <td><?=$row['tipousuario'];?></td>
+               <td><?=$row['nombre'];?></td>
+               <td><?=$row['apellido'];?></td>
+               <td><?=$row['email'];?></td>
                <td><?=$row['telefono'];?></td>
-               <td><?=$row['descripcion'];?></td>
-               <td><p>12:00 PM</p></td>
+               <td>
+                 <a href="editar-usuario.php" class="btn btn-primary btn-sm">Editar</a>
+               </td>
+
+               <td>
+                 <a href="borrar-usuario.php" class="btn btn-danger btn-sm">Eliminar</a>
+               </td>
+               
               </tr>
 
               <?php

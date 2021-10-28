@@ -218,7 +218,7 @@
                with font-awesome or any other icon font library -->
 
                <li class="nav-item">
-            <a href="pages/widgets.html" class="nav-link active">
+            <a href="index.php" class="nav-link active">
               <i class="nav-icon fas fa-home"></i>
               <p>
                 Tablero                
@@ -230,8 +230,7 @@
             <a href="usuarios.php" class="nav-link">
               <i class="nav-icon fas fa-user"></i>
               <p>
-               Usuarios
-                
+               Usuarios                
               </p>
             </a>
           </li>
@@ -240,8 +239,7 @@
             <a href="reportes.php" class="nav-link">
               <i class="nav-icon fas fa-file-alt"></i>
               <p>
-              Reporte
-                
+              Reporte                
               </p>
             </a>
           </li>

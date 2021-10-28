@@ -2,35 +2,38 @@
 session_start();
 include('dbconfig.php');
 
-//enviar alerta a tabla reportes
-if(isset($_POST['finalizar'])){
+//crear usuario
+if(isset($_POST['crearusuario'])){
 
-    $tipoemergencia = $_POST['tipoemergencia'];
-    $nombrepersona = $_POST['nombredepersona'];
-    $direccion = $_POST['direccion'];
-    $telefono = $_POST['telefono'];
-    $descripcion = $_POST['descripcion'];    
+    $usuario = $_POST['usuario'];
+    $contrasena = $_POST['contrasena'];
+    $tipousuario = $_POST['tipousuario'];  
+    $nombre = $_POST['nombre'];
+    $apellido = $_POST['apellido'];
+    $email = $_POST['email'];   
+    $telefono = $_POST['telefono'];   
     $postData = [
-        'tipoemergencia'=>$tipoemergencia,
-        'nombredepersona'=>$nombrepersona,
-        'direccion'=>$direccion,
-        'telefono'=>$telefono,
-        'descripcion'=>$descripcion,    
-        
+        'usuario'=>$usuario,
+        'contrasena'=>$contrasena,
+        'tipousuario'=>$tipousuario,
+        'nombre'=>$nombre,
+        'apellido'=>$apellido,
+        'email'=>$email,
+        'telefono'=>$telefono,     
     ];
     
-    $ref_table = "Reporte";
+    $ref_table = "Usuarios";
     $postRef_result = $database->getReference($ref_table)->push($postData);
        
     if($postRef_result){
     
-        $_SESSION['status'] = "Se ha enviado su alerta, un representante lo contactará";
-        header('Location: index.php');
+        $_SESSION['status'] = "Usuario Creado Correctamente";
+        header('Location: usuarios.php');
     
     }else{
     
-        $_SESSION['status'] = "No se ha enviado la alerta";
-        header('Location: index.php');
+        $_SESSION['status'] = "No se ha podido crear";
+        header('Location: usuarios.php');
     
     }
     

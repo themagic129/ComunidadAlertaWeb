@@ -27,12 +27,15 @@
     <input type="password" name="contrasena" class="form-control">
 </div>
 
-<select class="form-select" aria-label="Default select example">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
+<select class="form-select" name="tipousuario" aria-label="Default select example">
+  <option selected>Tipo de Usuario</option>
+  <option value="1">Estándard</option>
+  <option value="2">Administrador</option>  
 </select>
+
+<hr>
+<h5>Datos Personales</h5>
+<hr>
 
 <div class="form-group mb-3">
     <label for="">Nombre</label>
@@ -48,26 +51,27 @@
 
 <div class="form-group mb-3">
     <label for="">Email</label>
-    <input type="textarea" name="email" class="form-control">
+    <input type="text" name="email" class="form-control">
 </div>
 
 
 <div class="form-group mb-3">
     <label for="">Teléfono</label>
-    <input type="textarea" name="telefono" class="form-control">
+    <input type="text" name="telefono" class="form-control">
 </div>
 
 
-
+<!-- BTN DE MUESTRA
 <div class="form-group mb-3">
     <button type="submit" name="enviar_alerta" class="btn btn-primary">Enviar Alerta</button>
-</div>
+</div> -->
+<div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+        <button type="submit" name="crearusuario" class="btn btn-primary">Crear Usuario</button>
+ </div>
 
 </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
+     
 
 </form>
 

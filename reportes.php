@@ -11,7 +11,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="ml-5">Historial de Emergencias</h1>
+            <h1 class="ml-5">Historial de Reportes</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -49,7 +49,7 @@
            <?php
            include('dbconfig.php');
 
-           $ref_table = 'Emergencias';
+           $ref_table = 'Reportes';
            $fetchdata = $database->getReference($ref_table)->getValue();
 
            if($fetchdata > 0) {
