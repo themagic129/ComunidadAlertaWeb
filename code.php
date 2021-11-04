@@ -2,8 +2,47 @@
 session_start();
 include('dbconfig.php');
 
+
+if(isset($_POST['crearusuario']))
+{
+
+$nombre = $_POST['nombre'];
+$email = $_POST['email'];
+$contrasena = $_POST['contrasena'];
+$telefono = $_POST['telefono'];
+
+$userProperties = [
+    'email' => $email,
+    'emailVerified' => false,
+    'phoneNumber' => $telefono,
+    'password' => $contrasena,
+    'displayName' => $nombre,   
+   
+];
+
+$createdUser = $auth->createUser($userProperties);
+
+if($createdUser)
+{
+
+    $_SESSION['status'] = "User Created Succefully";
+    header("Location: usuarios.php");
+    exit();
+
+}else {
+    $_SESSION['status'] = "User Creation Failed";
+    header("Location: usuarios.php");
+    exit();
+}
+
+
+
+}
+
+
+
 //crear usuario
-if(isset($_POST['crearusuario'])){
+if(isset($_POST[''])){
 
     $usuario = $_POST['usuario'];
     $contrasena = $_POST['contrasena'];
@@ -38,6 +77,9 @@ if(isset($_POST['crearusuario'])){
     }
     
     }
+
+
+
 
 //Finalizar/Atender alerta //
 if(isset($_POST['finalizar']))

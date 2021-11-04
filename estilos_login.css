@@ -1,0 +1,56 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap');
+
+
+.header {
+    background-color: rgb(255, 255, 255);
+    width: auto;
+    height: 100px;    
+}
+
+.contenido{
+    background-color: #F56A15;
+    width: auto;
+    height: 740px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.titulo{
+    font-weight: 600;
+}
+
+.logo img{
+     height: 120px;
+     margin-bottom: 15px;
+}
+
+.contenedor-login {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    height: 680px;
+    border-radius: 30px;
+
+}
+
+.cabecera-login {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+
+.footer {
+    background-color: #3C5396;
+    width: auto;
+    color: white;
+    font-weight: 500;
+    font-size: 1em;
+}
