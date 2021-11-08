@@ -36,36 +36,48 @@
     <div class="container-lg-12">
         <div class="row">
           <div class="col">
-              <div class="header"></div>
+              <div class="header">
+                  <div class="header-logo">
+                      <img src="img/logodefensa.png" alt="">
+                       <div class="titulo-defensa">
+                           <h3 style="color: #F56A15;">Defensa Civil</h3>
+                           <h3 style="color:#3C5396">República Dominicana</h3>
+                       </div>
+                  </div>
+              </div>
           </div>         
         </div>
 
         <div class="row">
-            <div class="col">
-                <div class="container-lg-12">
+            <div class="col">               
                   <div class="contenido">
 
                     <div class="contenedor-login">
                         <div class="cabecera-login">
                         <div class="logo">
-                            <img src="/img/logodefensa.png" alt="">
+                            <img src="img/logodefensa.png" alt="">
                         </div>
 
                             <h2 class="titulo">COMUNIDAD ALERTA</h2>
                             <p>Apoyando la comunidad ante eventos de desastre</p>
                         </div>
-                            <form action="">
-                                <div class="mb-3">
+                            <form action="login2.php" method="post" autocomplete="off">
+                                
+                            <?php if (isset($_GET['error'])){ ?>
+                                <p class="error"><?php echo $_GET['error']; ?></p>
+                                <?php } ?>                            
+                            
+                            <div class="mb-3">
                                     <label for="exampleInputEmail1" class="form-label">Usuario</label>
-                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                    <input type="text" name="usuario" autocomplete="off" placeholder="Introduzca su usuario" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                                     <div id="emailHelp" class="form-text">Nunca comparta su nombre de usuario con los demás.</div>
                                   </div>
                                   <div class="mb-5">
                                     <label for="exampleInputPassword1" class="form-label">Contraseña</label>
-                                    <input type="password" class="form-control" id="exampleInputPassword1">
+                                    <input type="password"  name="contrasena" placeholder="Introduzca su contraseña" class="form-control" id="exampleInputPassword1">
                                   </div>
 
-                                  <button type="submit" name="crearusuario" class="btn btn-primary" style="width:99%; height:45px; border-radius: 80px;">Iniciar</button>
+                                  <button type="submit" name="login" class="btn btn-primary" style="width:99%; height:45px; border-radius: 80px;">Iniciar</button>
                                 
                             </form>
 
@@ -73,8 +85,6 @@
                         </div>
                     </div>
 
-
-                  </div>
                 </div>
             </div>
         </div>

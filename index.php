@@ -2,9 +2,6 @@
 
 <?php include_once "vistas/parte_superior.php"?>
 
-
-
-
 <script>
   $(document).ready(function()
   {
