@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -72,13 +73,24 @@
                                     <input type="text" name="usuario" autocomplete="off" placeholder="Introduzca su usuario" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                                     <div id="emailHelp" class="form-text">Nunca comparta su nombre de usuario con los demás.</div>
                                   </div>
-                                  <div class="mb-5">
+                                  <div class="mb-3">
                                     <label for="exampleInputPassword1" class="form-label">Contraseña</label>
                                     <input type="password"  name="contrasena" placeholder="Introduzca su contraseña" class="form-control" id="exampleInputPassword1">
                                   </div>
 
+                                  <div class="form-group">
+                  <label for="exampleSelectRounded0">Tipo de Usuario</label>
+                  <select class="custom-select rounded-0" name="role" id="exampleSelectRounded0">
+                    <option selected value="Operador">Operador</option>
+                    <option value="Administrador">Administrador</option>
+                   
+                  </select>
+                </div>
+
+
                                   <button type="submit" name="login" class="btn btn-primary" style="width:99%; height:45px; border-radius: 80px;">Iniciar</button>
                                 
+
                             </form>
 
 

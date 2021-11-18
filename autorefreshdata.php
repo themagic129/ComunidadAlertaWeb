@@ -22,12 +22,15 @@ if($fetchdata > 0){
   foreach($fetchdata as $key => $row)
    {
 
+   
     ?>
+
+
  
  <div class="row">
-
 <div class="col">
     <div class="tarjeta-emergencia">
+      
   <div class="card" style="width: 18rem;">
   <div class="card-body">
   <h4 class="titulo-tarjeta">Alerta</h4>

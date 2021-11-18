@@ -8,7 +8,7 @@ if(isset($_POST['crearusuario']))
 
 $nombre = $_POST['nombre'];
 $email = $_POST['email'];
-$contrasena = $_POST['contrasena'];
+$usuario = $_POST['usuario'];
 $telefono = $_POST['telefono'];
 
 $userProperties = [
@@ -42,23 +42,20 @@ if($createdUser)
 
 
 //crear usuario
-if(isset($_POST[''])){
+if(isset($_POST['crearusuario'])){
 
     $usuario = $_POST['usuario'];
-    $contrasena = $_POST['contrasena'];
-    $tipousuario = $_POST['tipousuario'];  
+    $contrasena = $_POST['contrasena'];    
     $nombre = $_POST['nombre'];
-    $apellido = $_POST['apellido'];
+    $email = $_POST['email'];
     $email = $_POST['email'];   
     $telefono = $_POST['telefono'];   
     $postData = [
         'usuario'=>$usuario,
-        'contrasena'=>$contrasena,
-        'tipousuario'=>$tipousuario,
-        'nombre'=>$nombre,
-        'apellido'=>$apellido,
+        'contrasena'=>$contrasena,        
+        'nombre'=>$nombre,       
         'email'=>$email,
-        'telefono'=>$telefono,     
+            
     ];
     
     $ref_table = "Usuarios";

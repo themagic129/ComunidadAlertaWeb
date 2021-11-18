@@ -1,4 +1,13 @@
 
+<?php
+session_start();
+
+if (isset($_SESSION['id']) && isset($_SESSION['nombre'])) {
+
+
+?>
+
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -39,9 +48,9 @@
 <div class="wrapper">
 
  
-  <div class="preloader flex-column justify-content-center align-items-center">
+  <!--<div class="preloader flex-column justify-content-center align-items-center">
     <img class="animation__shake" src="img/logodefensa.png" alt="Logo Defenssa Civil" height="60" width="60">
-  </div>
+  </div> -->
 
   <!-- Navbar -->
   <nav class="main-header navbar navbar-expand navbar-white navbar-light">
@@ -197,7 +206,10 @@
           <img src="dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">Administrador</a>
+          <a href="#" class="d-block mb-1"><?php echo $_SESSION['nombre']; ?></a>
+          
+          <a href="#" class="d-block"><?php echo $_SESSION['role']; ?></a>
+        
         </div>
       </div>
 
@@ -228,7 +240,7 @@
             </a>
           </li>
           
-          <li class="nav-item">
+          <li class="nav-item" id="usuarios">
             <a href="usuarios.php" class="nav-link">
               <i class="nav-icon fas fa-user"></i>
               <p>
@@ -276,7 +288,7 @@
             </a>
           </li>
 
-        <!--
+       <!--
           <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-copy"></i>
@@ -879,3 +891,11 @@
   </aside>
 
   
+ <?php
+
+}else{
+  header("Location: login.php");
+                    exit();
+}
+
+  ?>

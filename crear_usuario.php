@@ -25,7 +25,7 @@ if(isset($_SESSION['status'])){
       <div class="modal-body">
         
 
-<form action="code.php" method="POST">
+<form action="insertar_usuario.php" method="POST">
 
 <div class="form-group mb-3">
     <label for="">Nombre Completo</label>
@@ -37,16 +37,25 @@ if(isset($_SESSION['status'])){
     <input type="email" name="email" class="form-control">
 </div>
 
+<div class="form-group mb-3">
+    <label for="">Contacto</label>
+    <input type="text" name="contacto" class="form-control">
+</div>
 
 <div class="form-group mb-3">
-    <label for="">Contraseña</label>
-    <input type="password" name="contrasena" class="form-control">
+    <label for="">Cedula</label>
+    <input type="text" name="Cedula" class="form-control">
+</div>
+
+<div class="form-group mb-3">
+    <label for="">Usuario</label>
+    <input type="text" name="usuario" class="form-control">
 </div>
 
 
 <div class="form-group mb-3">
-    <label for="">Teléfono</label>
-    <input type="text" name="telefono" class="form-control">
+    <label for="">Contraseña</label>
+    <input type="password" name="contrasena" class="form-control">
 </div>
 
 
@@ -114,16 +123,7 @@ if(isset($_SESSION['status'])){
 </div>
 
 
-<!-- BTN DE MUESTRA
-<div class="form-group mb-3">
-    <button type="submit" name="enviar_alerta" class="btn btn-primary">Enviar Alerta</button>
-</div> -->
-<div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-        <button type="submit" name="crearusuario" class="btn btn-primary">Crear Usuario</button>
- </div>
 
-</div>
      
 
 </form>-->

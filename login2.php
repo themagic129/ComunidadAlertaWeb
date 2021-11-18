@@ -2,7 +2,9 @@
 session_start();
 include "db_conn.php";
 
-if(isset($_POST['login']) && isset($_POST['contrasena'])){
+//if(isset($_POST['login']) && isset($_POST['contrasena']))//
+
+if(isset($_POST['usuario']) && isset($_POST['contrasena']) && isset($_POST['role'])){
    
    function validate($data){
       $data = trim($data);
@@ -12,6 +14,7 @@ if(isset($_POST['login']) && isset($_POST['contrasena'])){
    
     $usuario = $_POST['usuario'];
     $contrasena = $_POST['contrasena'];   
+    $role = $_POST['role'];
 
 
      if(empty($usuario)){
@@ -31,10 +34,11 @@ if(isset($_POST['login']) && isset($_POST['contrasena'])){
             $result = mysqli_query($conn, $sql);
             if(mysqli_num_rows($result) === 1){
                $row = mysqli_fetch_assoc($result);
-               if($row['usuario']=== $usuario && $row['contrasena']=== $contrasena){
+               if($row['contrasena']=== $contrasena && $row['role']=== $role){
                
                     $_SESSION['usuario'] = $row['usuario'];
-                    $_SESSION['contrasena'] = $row['contrasena'];
+                    $_SESSION['nombre'] = $row['nombre'];                   
+                    $_SESSION['role'] = $row['role'];
                     $_SESSION['id'] = $row['id'];
                     header("Location: index.php");
                     exit();
