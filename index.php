@@ -1,6 +1,7 @@
 
 <?php include_once "vistas/parte_superior.php"?>
 
+
 <!-- Validacion usuario / admin -->
 <?php
 

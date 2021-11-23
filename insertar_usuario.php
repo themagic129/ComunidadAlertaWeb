@@ -12,7 +12,7 @@ if(isset($_POST['crearusuario']))
 	 VALUES ('$nombre','$email','$contacto','$cedula','$usuario','$contrasena')";
 	 if (mysqli_query($conn, $sql)) {
 
-        header("Location: index.php");
+        header("Location: usuarios.php");
         exit();
 	 } else {
 		echo "Error: " . $sql . "

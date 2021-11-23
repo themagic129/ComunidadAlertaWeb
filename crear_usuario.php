@@ -44,7 +44,7 @@ if(isset($_SESSION['status'])){
 
 <div class="form-group mb-3">
     <label for="">Cedula</label>
-    <input type="text" name="Cedula" class="form-control">
+    <input type="text" name="cedula" class="form-control">
 </div>
 
 <div class="form-group mb-3">
