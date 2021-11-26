@@ -3,21 +3,11 @@
 
 <?php include_once "validar_usuario.php"?>
 
+<link rel="stylesheet" href="dist/tui-calendar.css">
+<script src="dist/tui-calendar.js"></script>
 
 
-<script>
-  $(document).ready(function() {
-    setInterval(function(){
-      $("#autodata").load("autorefreshdata.php");
-      refresh();
-    },1000);
-  });
 
-  // var audioAlert = new Audio('alerta.mp3');
-  // audioAlert.loop = false;
-  // audioAlert.play();
-
-</script>
 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
@@ -43,6 +33,11 @@
     
   <div class="container col-12 d-flex flex-wrap">
    
+  <div id="calendar">
+
+  
+
+  </div>
 
   <div id="autodata" class="col-12 d-flex flex-wrap"></div>
 

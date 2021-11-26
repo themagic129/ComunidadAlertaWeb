@@ -1,16 +1,21 @@
+
 <?php 
+
+
+
 
 if(isset($_SESSION['status'])){
 
   echo "<h5 class='alert alert-success'>".$_SESSION['status']."</h5>";
   unset($_SESSION['status']);
+ 
 }
 
 
 ?>
 
 <?php
-  
+
 
 include('dbconfig.php');
 
@@ -26,12 +31,15 @@ if($fetchdata > 0){
     ?>
 
 
- 
+
  <div class="row">
+   
 <div class="col">
-    <div class="tarjeta-emergencia">
-      
+
+    <div class="tarjeta-emergencia">    
+    
   <div class="card" style="width: 18rem;">
+ 
   <div class="card-body">
   <h4 class="titulo-tarjeta">Alerta</h4>
     <h4  class="tipo-alerta"><?=$row['tipoemergencia'];?></h4>

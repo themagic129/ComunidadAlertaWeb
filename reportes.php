@@ -2,7 +2,7 @@
 
 <?php include_once "vistas/parte_superior.php"?>
 
-
+<?php include_once "validar_usuario.php"?>
 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
