@@ -13,11 +13,13 @@
     },1000);
   });
 
-  // var audioAlert = new Audio('alerta.mp3');
-  // audioAlert.loop = false;
-  // audioAlert.play();
+ 
 
 </script>
+
+
+
+
 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
@@ -44,14 +46,9 @@
   <div class="container col-12 d-flex flex-wrap">
    
 
-  <div id="autodata" class="col-12 d-flex flex-wrap"></div>
-
- <!--Aqui va el codigo php que corte para probar-->
-
-<!--Hasta aqui-->
-
-<!--Codigo de prueba-->
-
+  <div id="autodata" class="col-12 d-flex flex-wrap">
+    
+  </div>
 
 
 
