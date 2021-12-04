@@ -39,12 +39,14 @@ if($fetchdata > 0){
     <div class="tarjeta-emergencia">    
     
   <div class="card" style="width: 18rem;">
+
  
   <div class="card-body">
   <h4 class="titulo-tarjeta">Alerta</h4>
     <h4  class="tipo-alerta"><?=$row['tipoemergencia'];?></h4>
     
     <div class="detalle-evento">
+    <audio autoplay="autoplay"src="beepalert.mp3" id="sonido"></audio>
     <p class="detalle">Detalles</p>
     <p  class="info">Nombre: <span class="dato-info"><?=$row['nombredepersona'];?></span></p>
     <p class="info">Dirección: <span class="dato-info"><?=$row['direccion'];?></span></p>

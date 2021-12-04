@@ -51,6 +51,7 @@
 
            $ref_table = 'Reportes';
            $fetchdata = $database->getReference($ref_table)->getValue();
+           
 
            if($fetchdata > 0) {
 
@@ -58,13 +59,17 @@
 
               ?>
                <tr>
-               <td><p>26/10/63</p></td>
+               <td>
+               <?=$row['Fecha'];?>
+              </td>
                <td><?=$row['tipoemergencia'];?></td>
                <td><?=$row['nombredepersona'];?></td>
                <td><?=$row['direccion'];?></td>
                <td><?=$row['telefono'];?></td>
                <td><?=$row['descripcion'];?></td>
-               <td><p>12:00 PM</p></td>
+               <td>
+               <?=$row['Hora'];?>
+              </td>
               </tr>
 
               <?php
